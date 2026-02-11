@@ -32,7 +32,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 20px 60px;
-  /* position: sticky; */
+  position: sticky;
   top: 0;
   backdrop-filter: blur(2px);
   background: transparent;
@@ -103,14 +103,6 @@ nav img {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* .hero {
-  position: relative;
-  width: 100%;
-  height: 800px;
-  background: url('../images/ABG.png') center / cover no-repeat;
-  overflow: hidden;
-} */
-
 .hero {
   position: relative;
   width: 100%;
@@ -166,6 +158,284 @@ nav img {
   /* line-height: 2.3; */
   text-align: left;
 }
+
+.page {
+  padding: 80px 80px;
+  background: #000;
+}
+.card {
+  background: #111;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+.card img {
+  width: 100%;
+  display: block;
+}
+.cardtext {
+    padding-top: 60px;
+  padding-left: 100px;
+  padding-right: 100px;
+  letter-spacing: 0.8px;
+  word-spacing: 3px;
+  margin-bottom: 60px;
+}
+.cardtext h3 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  padding-bottom: 35px;
+  font-weight: 700;
+}
+.cardtext p {
+  font-size: 20px;
+  opacity: 2.0;
+  font-weight: 400;
+  line-height: 1.3;
+  color: rgb(130, 136, 142);
+}
+.cardtext .location {
+  margin-top:70px;
+  font-size: 20px;
+  color: rgb(130, 136, 142);
+  opacity: 0.8;
+  font-weight: bolder;
+}
+.cardtext1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  padding-top: 70px;
+  padding-bottom: 35px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.container {
+  width: 80%;
+  padding-top: 100px;
+  margin: auto;
+  gap: 0px;
+}
+
+/* TOP ROW */
+
+.brand-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 80px;
+  max-width: 700px;
+  line-height: 1.3;
+
+}
+
+/* LEFT SIDE */
+.brand-label {
+  font-size: 18px;
+  color: #bfbfbf;
+  margin-bottom: 10px;
+}
+
+.brand-title {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* RIGHT SIDE */
+
+.brand-right p {
+  /* margin: 8px 0; */
+  font-size:20px;
+  color: rgb(130, 136, 142);
+
+}
+
+/* PARAGRAPH BELOW */
+
+.brand-description {
+  max-width: 1150px;
+  padding-left: 140px;
+}
+
+.brand-description p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: rgb(130, 136, 142);
+}
+
+.color-section {
+  /* padding: 100px 0; */
+  background: #000000;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  max-width: 1100px;
+}
+
+.section-title {
+  text-align: left;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+  font-weight: 400;
+  color: #ffffff;
+
+}
+
+.color-grid {
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 130px;
+  margin-bottom: 140px;
+  color: rgb(130, 136, 142);
+
+}
+
+.color-item h3 {
+  font-size: 20px;
+  margin-bottom: 35px;
+  font-weight: 500;
+}
+
+.color-item p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgb(130, 136, 142);
+  
+}
+
+.brand-title {
+  text-align: left;
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: rgb(130, 136, 142);
+}
+
+.LogoOptions {
+  padding-top: 100px;
+  width: 80%;
+  max-width: 900px;
+  display: block;
+  margin: auto; 
+}
+
+.typography-section {
+  background: #000;
+  padding: 10px 0;
+  max-width: -900px;
+}
+
+/* .container {
+  width: 80%;
+  max-width: 1100px;
+  margin: auto;
+} */
+
+.section-heading {
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Logo Row */
+
+.logo-row {
+  display: flex;
+  justify-content:baseline;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.logo-preview img {
+  /* max-width: 300px; */
+  margin-left: 200px;
+}
+
+/* Marathi Section */
+.marathi-copy {
+  max-width: 1100px;
+  margin-bottom: 80px;
+}
+
+.label {
+  font-size: 18px;
+  color: rgb(130, 136, 142);
+  margin-bottom: 5px;
+}
+
+.font-name {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.marathi-text {
+    margin-top: 40px;
+  font-size: 20px;
+  line-height: 1.8;
+  color:white
+}
+
+/* Font Columns */
+
+.font-columns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+.font-box {
+  width: 45%;
+}
+
+.alphabet {
+  color: rgb(130, 136, 142);
+  line-height: 1.8;
+}
+
+/* Divider */
+
+.divider {
+    width: 100%;
+    margin: 60px 0;
+}
+
+/* Packaging */
+
+.section-heading1{
+    margin-top: 50px;
+}
+.packaging-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.packaging-row img {
+  max-width: 750px;
+  transition: 0.3s ease;
+}
+
+.packaging-row img:hover {
+  transform: translateY(-10px);
+}
+
 
 /* FOOTER */
 .footer {
@@ -298,10 +568,181 @@ nav img {
       </a>
     </span>
   </div>
-
 </div>
-
   </section>
+  <section class="page" id="brand">
+    <div class="card">
+      <img src="../images/Apage2.png" alt="Logo Design" />
+    </div>
+    <div class="cardtext">
+        <h3>Logo Design</h3>
+        <p >
+          Assal Mavla Darbar is an authentic Maharashtrian restaurant opening soon in Kolhapur.specialize in traditional Kolhapuri Thali, 
+          offering rich flavors and an unforgettable dining experience. brand is growing, with future branches planned in Belgaum, Goa, and beyond.
+        </p>
+        <br>
+        <p>
+            Assal Mawala Darbar is a thali-based restaurant rooted in Kolhapurs warrior heritage.
+            It specializes in authentic Kolhapuri mutton thalis, prepared using traditional, time-honored methods.
+            The brand celebrates Maratha pride.
+        </p>
+        <p class="location">Location:</p>
+        <p>Kolhapur, Maharashtra</p>
+    </div>
+    <div class="brand">   
+        <h3 class="cardtext1">BRAND LOGO</h3>
+        <img src="../images/ALogoOrange.png" alt="" srcset="">
+      </div>
+
+    <div class="container">
+
+    <div class="brand-top">
+
+      <!-- LEFT SIDE -->
+      <div class="brand-left">
+        <p class="brand-label">Brand Name:</p>
+        <h2 class="brand-title">Assal Mawala Darbar</h2>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="brand-right">
+        <p>"Assal" = Authentic</p>
+        <p>"Mawala" = Warrior of Shivaji Maharaj</p>
+        <p>"Darbar" = Royal court</p>
+      </div>
+
+    </div>
+  </div>
+  
+    <!-- PARAGRAPH BELOW -->
+    <div class="brand-description">
+      <p>
+        Assal Mawala Darbar is a thali-based restaurant rooted in Kolhapur’s
+        warrior heritage. It specializes in authentic Kolhapuri mutton thalis,
+        prepared using traditional, time-honored methods. The brand celebrates
+        Maratha pride.
+      </p>
+    </div>
+    </section>
+
+    <section class="color-section">
+  <div class="container">
+
+    <h2 class="section-title">COLOR PALETTE</h2>
+
+    <div class="color-grid">
+      <div class="color-item">
+        <h3>Deep Maroon (Primary)</h3>
+        <p>
+          Represents richness, bold flavors, and royal heritage. Perfect for branding 
+          a mutton thali restaurant rooted in Kolhapur's fierce traditions.
+        </p>
+      </div>
+
+      <div class="color-item">
+        <h3>Mustard Yellow (Accent)</h3>
+        <p>
+          Symbolizes spice, warmth, and festivity. It 
+          reflects turmeric & other traditional ingredients used in your cuisine.
+        </p>
+      </div>
+
+      <div class="color-item">
+        <h3>Creamy Beige</h3>
+        <p>
+          A warm, soft neutral that serves as a calming backdrop ideal 
+          for website backgrounds, menus, social media posts, or printed materials. 
+          It keeps designs light and eye friendly, 
+          while maintaining the brand's rooted elegance.
+        </p>
+      </div>
+
+      <div class="color-item">
+        <h3>Charcoal Brown</h3>
+        <p>
+          Grounded, earthy, and versatile - this brown anchors the visual identity with richness. 
+          Perfect for body text, overlays, and subtle borders or dividers.
+           Works harmoniously with the creamy base to create timeless, rustic compositions
+        </p>
+      </div>
+    </div>
+
+    <h4 class="brand-title">PRIMARY BRAND COLORS (LOGO USE ONLY)</h4>
+
+    <img src="../images/AColorP.png" alt="" srcset="">
+    <img src="../images/ALogoOptions.png" alt="" class="LogoOptions">
+  </div>
+</section>
+
+<section class="typography-section">
+  <div class="container">
+
+    <h2 class="section-heading">TYPOGRAPHY</h2>
+
+    <!-- Logo Font Row -->
+    <div class="logo-row">
+      <div class="logo-text">
+        <p class="label">Logo font - Mathan AMD</p>
+      </div>
+
+      <div class="logo-preview">
+        <img src="../images/ALogo.png" alt="Logo">
+      </div>
+    </div>
+
+    <!-- Marathi Copy -->
+    <div class="marathi-copy">
+      <p class="label">Marathi Copy font</p>
+      <p class="font-name">Martel</p>
+
+      <p class="marathi-text">
+        छत्रपती शिवरायांनी स्थापन केलेल्या मराठी साम्राज्याचा विस्तार अटकेपार करताना अनेक मावळे धारातीर्थी पडले.
+        सह्याद्रीच्या गडकिल्ल्यावरील बुरुजांसारखी अभेद्य निष्ठा असलेल्या मावळ्यांनी महाराजांवरील श्रध्दा आणि स्वराज्यप्रेमापोटी जीवाची पर्वा केली नाही.
+        त्यांचे बलिदान, पराक्रम स्वराज्यासाठीचा त्याग आजही सर्वासाठी स्फुर्तीदायक आहे.जय भवानी !! जय शिवाजी !!
+      </p>
+    </div>
+
+    <!-- Heading & Subheading Fonts -->
+    <div class="font-columns">
+
+      <div class="font-box">
+        <p class="label">Heading font</p>
+        <h3 class="font-name">FUTURA</h3>
+        <p class="alphabet">
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+          abcdefghijklmnopqrstuvwxyz<br>
+          1234567890
+        </p>
+      </div>
+
+      <div class="font-box">
+        <p class="label">Sub heading font</p>
+        <h3 class="font-name">HELVETICA</h3>
+        <p class="alphabet">
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+          abcdefghijklmnopqrstuvwxyz<br>
+          1234567890
+        </p>
+      </div>
+
+    </div>
+
+    <img src="../images/ADivider.png" alt="" srcset="" class="divider">
+
+    <!-- Packaging Section -->
+    <h2 class="section-heading1">PACKAGING</h2>
+
+    <div class="packaging-row">
+      <img src="../images/APackaging.png" alt="Packaging 1">
+    </div>
+    <img src="../images/ADivider.png" alt="" srcset="" class="divider">
+
+    <div class="packaging-row">
+      <img src="../images/ATemplates.png" alt="Packaging 2">
+    </div>
+  </div>
+</section>
+
 
   <footer class="footer">
   <div class="footer-top">
