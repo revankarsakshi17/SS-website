@@ -165,23 +165,30 @@
 
     .hero {
       max-width: 1200px;
-      margin: 20px auto;
+      margin: 20px ;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 0.6fr 1.4fr;
       align-items: center;
-      gap: 190px;
+      gap: 60px;
+      margin-left: 160px;
     }
     .hero h1 {
-      font-size: 42px;
+      font-size: 50px;
       line-height: 1.2;
       margin-bottom: 18px;
+      text-align: left;
     }
     .hero p {
-      font-size: 14px;
+      font-size: 20px;
       color: #bdb7f3;
       max-width: 380px;
       margin-bottom: 28px;
     }
+
+    button{
+      font-size: 17px;
+    }
+    
     .buttons button {
       padding: 12px 26px;
       /* border-radius: 25px; */
@@ -198,8 +205,9 @@
     }
     .hero img {
       width: 100%;
-      max-width: 420px;
+      max-width: 720px;
       filter: drop-shadow(0 0 40px rgba(138,92,255,.6));
+      margin-left: 300px;
     }
     .testimonial-wrapper {
   max-width: 700px;
