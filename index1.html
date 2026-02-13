@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Website</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./imagesfav/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./imagesfav/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./imagesfav/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./imagesfav/favicon/site.webmanifest">
+    <meta name="theme-color" content="#000000">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loader">
+    <img src="./images/SSlogo.png" alt="">
+  <!-- <div class="spinner"></div> -->
+  <p>Loading...</p>
+</div>
+<!-- MAIN CONTENT -->
+  <header class="navbar">
+    <div class="logo"><img src="./images/SSlogo.png" alt="" srcset=""></div>
+
+    <nav id="navMenu">
+      <a class="active">Home</a>
+      <a>Services</a>
+      <a>Projects</a>
+      <a>About us</a>
+      <a class="Contact">Contact us</a>
+    </nav>
+
+    <div class="menu-dots" id="menuBtn">
+      <span class="first"></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <section class="hero">
+<div>
+<h1>Welcome to<br>Social Santa.</h1>
+<p>An agency that is required for your social presence.</p>
+<div class="buttons">
+<button class="primary">Make a wish</button>
+<button>Santa, who?</button>
+</div>
+</div>
+<img src="./images/Reindeer.png" alt="Reindeer" />
+</section>
+
+
+<section class="testimonial-wrapper">
+  <div class="testimonial-card" id="testimonialCard">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <p class="text" id="testimonialText"></p>
+    <span class="author" id="testimonialAuthor"></span>
+  </div>
+</section>
+
+
+<footer>
+<div>reallygood@gmail.com<br>+91 XXXXX XXXXX</div>
+ <div class="footer-icons">
+    <a href="#">
+      <img src="./images/" alt="Instagram">
+    </a>
+    <a href="#">
+      <img src="./images/" alt="LinkedIn">
+    </a>
+    <a href="#">
+      <img src="./images/X.png" alt="Twitter">
+    </a>
+    <a href="#">
+      <img src="./images/youtube.png" alt="YouTube">
+    </a>
+    <a href="#">
+      <img src="./images/facebook.png" alt="Facebook">
+    </a>
+  </div>
+</footer>
+  <!-- <div class="demo">Click the 3 dots to toggle menu</div> -->
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navMenu = document.getElementById("navMenu");
+
+    // Toggle menu visibility
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+
+    // Active state handling for nav links
+    const navLinks = navMenu.querySelectorAll("a");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
+  </script>
+<script>
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  // const content = document.getElementById("content");
+
+  // Optional delay for smooth effect
+  setTimeout(() => {
+    loader.style.display = "none";
+    content.style.display = "block";
+  }, 0); // 1.5 seconds
+});
+</script>
+<script>
+
+  const testimonials = [
+    {
+      text: "Social Santa completely transformed our brand presence.",
+      author: "Savannah Nguyen – YouTube Influencer"
+    },
+    {
+      text: "Their creative strategy doubled our engagement.",
+      author: "Arjun Mehta – Startup Founder"
+    },
+    {
+      text: "The most professional social media team we’ve worked with.",
+      author: "Priya Sharma – Marketing Lead"
+    },
+    {
+      text: "Every campaign feels premium and thoughtful.",
+      author: "Daniel Brooks – Content Creator"
+    }
+  ];
+
+  let index = 0;
+
+  const card = document.getElementById("testimonialCard");
+  const textEl = document.getElementById("testimonialText");
+  const authorEl = document.getElementById("testimonialAuthor");
+
+  function setTestimonial(i) {
+    textEl.textContent = testimonials[i].text;
+    authorEl.textContent = testimonials[i].author;
+  }
+
+  setTestimonial(index);
+
+  function swapTestimonial() {
+    card.classList.add("swap-out");
+
+    setTimeout(() => {
+      index = (index + 1) % testimonials.length;
+      setTestimonial(index);
+
+      card.classList.remove("swap-out");
+      card.classList.add("swap-in");
+
+      requestAnimationFrame(() => {
+        card.classList.remove("swap-in");
+      });
+    }, 500);
+  }
+
+  setInterval(swapTestimonial, 8000);
+</script>
+
+</body>
+</html>
