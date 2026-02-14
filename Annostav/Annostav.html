@@ -21,8 +21,8 @@ html, body {
 
 body {
       font-family: "AloeVera", sans-serif;
-      background: #0b0f14;
-      color: #eaeaea;
+      background:white;
+      color:black;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -104,21 +104,170 @@ nav img {
 }
 
 /* HERO PAGE */
-.hero {
+.hero{
   position: relative;
   width: 100%;
-  height: 800px;
-  background: url('../images/CBG.png') center / cover no-repeat;
-  overflow: hidden;
+  height: 100vh;          /* full screen height */
+  min-height: 650px;      /* prevents too small on laptops */
+
+  background-image: url('../images/AnBG.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* DARK OVERLAY */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 1;
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.35);
+  z-index:1;
+}
+
+
+/* ================= MAIN ================= */
+.case-section{
+  margin:60px auto;
+  padding:0 20px;
+}
+
+/* ================= TOP ROW ================= */
+.top-row{
+  display:flex;
+  gap:60px;
+  align-items:flex-start;
+}
+
+.left-content{
+  flex:1;
+}
+
+.left-content p{
+  font-size:15px;
+  line-height:1.6;
+}
+
+.logo{
+  margin-top:30px;
+}
+
+.logo img{
+  height:50px;
+}
+
+/* RIGHT IMAGE */
+.right-image{
+  flex:1.2;
+}
+
+.right-image img{
+  width:100%;
+  display:block;
+}
+
+/* ================= DIAGONAL STRIP ================= */
+.diagonal-strip{
+  position:relative;
+  margin:80px 0;
+}
+
+.diagonal-strip img{
+  width:100%;
+  display:block;
+  transform:skewY(2deg);
+}
+
+.overlay-text{
+  position:absolute;
+  top:50%;
+  left:25%;
+  transform:translate(-50%,-50%);
+  color:#fff;
+  font-size:20px;
+  font-weight:500;
+  white-space:nowrap;
+}
+
+/* ================= OVERVIEW ================= */
+.overview{
+  /* max-width:900px; */
+}
+
+.overview h3{
+  font-size:18px;
+  margin-bottom:15px;
+}
+
+.overview p{
+  font-size:15px;
+  line-height:1.8;
+  margin-bottom:20px;
+}
+
+/* ================= SECTION ================= */
+.section{
+  margin:80px 0;
+}
+
+.section h2{
+  font-size:22px;
+  margin-bottom:20px;
+}
+
+.section p{
+  max-width:900px;
+  font-size:15px;
+  line-height:1.8;
+}
+
+/* ================= IMAGE GRID ================= */
+.image-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  margin-top:40px;
+}
+
+.image-grid img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:6px;
+}
+
+/* ================= FULL WIDTH IMAGE ================= */
+.full-banner img{
+  width:100%;
+  display:block;
+}
+
+.flyer {
+  width:1800px;
+  display:block;
+  margin:80px 0;
+}
+
+/* ================= CONTENT ================= */
+.container{
+  /* max-width:1200px; */
+  margin:80px auto;
+  padding:0 20px;
+}
+
+.text-section{
+  /* max-width:900px; */
+  margin-bottom:60px;
+}
+
+.text-section h3{
+  font-size:18px;
+  margin-bottom:15px;
+}
+
+.text-section p{
+  font-size:15px;
+  line-height:1.8;
 }
 
 /* FOOTER */
@@ -305,14 +454,123 @@ nav img {
   </div>
 </nav>
 
+<!-- HERO -->
+<div class="hero">
+  <!-- Background -->
+</div>
 
+<div class="case-section">
 
+  <div class="top-row">
+    <div class="left-content">
+      <p><strong>Our Work Showcase:</strong><br>Anotsava 2026</p>
+      <p><strong>Client:</strong> Rotary Club of Belagavi</p>
 
+      <div class="logo">
+        <img src="../images/Annlogo.png">
+      </div>
+    </div>
 
+    <div class="right-image">
+      <img src="../images/HORADING Mockup 1.png">
+    </div>
+  </div>
 
+  <div class="diagonal-strip">
+    <img src="../images/Grey.png">
+    <div class="overlay-text">
+      <h2>SERVICE:</h2>
+      Event Branding, Print Media & On-Ground Creatives
+    </div>
+  </div>
 
+  <div class="overview">
+    <h3>Project Overview</h3>
+    <p>
+      
+Social Santa successfully delivered end-to-end print media and event branding solutions for Annotsav 2026, one of Belagavi’s largest food and cultural festivals. From large-format structures to detailed print creatives, our team handled the entire visual identity of the event with a strong focus on impact, consistency and audience engagement.
+    </p>
+  </div>
 
+  <div class="section">
+   
+    <p>
+     We designed and executed a wide range of creative assets including:
+    </p>
 
+    <div class="image-grid">
+      <img src="../images/ACard1.png">
+      <img src="../images/ACard2.png">
+      <img src="../images/ACard3.png">
+    </div>
+  </div>
+
+</div>
+
+<div class="full-banner">
+  <img src="../images/Hoarding2.png">
+</div>
+
+<div class="container">
+
+  <div class="text-section">
+    <h3>Creative Approach</h3>
+    <p>
+     Our creative approach focused on theme-driven designs reflecting food, culture and celebration. We used bold and festive color palettes for high public visibility, clean typography suitable for large crowds and open spaces, and seamless integration of sponsor branding. All designs were optimized for both close-up interaction and long-distance viewing.
+    </p>
+  </div>
+
+  <div class="image-grid">
+    <img src="../images/Acolor.png">
+  </div>
+  <div>
+    <img src="../images/RNS.png">
+    </div>
+</div class="flyer">
+    <img src="../images/annotsav flyer 2026 5 1.png">
+  </div>
+
+</div>
+
+<div class="overview">
+    <h3>Execution and quality</h3>
+    <p>
+      Social Santa ensured print-ready accuracy, color consistency and premium finishing across all deliverables. Special attention was given to large-scale elements such as the entrance gate, stage and photobooth, making them key visual highlights of the event.
+
+    </p>
+  </div>
+
+  <div class="overview">
+    <h3>Project Impact</h3>
+    <p>
+      Strong first impression through impactful entrance branding
+High audience engagement at the photobooth
+Professional stage presence for performances
+Consistent branding across the entire venue
+Positive feedback from organizers and participants
+
+    </p>
+  </div>
+
+  <div class="overview">
+    <h3>Why Social Santa</h3>
+    <p>
+      
+Complete event branding expertise
+Creative and strategic design thinking
+End-to-end print media execution
+Reliable and on-time delivery
+Proven experience in large-scale events
+
+    </p>
+  </div>
+
+  <div class="overview">
+    <h3>Conclusion</h3>
+    <p>
+     The Annotsav 2026 event branding and print media campaign highlights Social Santa’s ability to manage large-format event visuals with precision and creativity. We transform events into memorable brand experiences through impactful design and flawless execution.
+    </p>
+  </div>
 
 <!-- BRANDS STRIP -->
 <section class="brand-strip">
