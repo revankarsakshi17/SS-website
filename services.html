@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Services Section</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<style>
+  @font-face {
+     font-family: "AloeVera";
+    src: url("../fonts/AloeVera-Light.otf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+      font-family: "AloeVera", sans-serif;
+      background:white;
+      color:black;
+}
+
+
+.services {
+  background: #6e3bb5;
+  padding: 100px 80px;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  color: #fff;
+  font-size: 35px;
+  margin-bottom: 120px;
+}
+
+/* LAYOUT */
+.services-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+/* LEFT SIDE */
+.left-side {
+  width: 200px;
+  position: relative;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  display: flex;
+  gap: 40px;
+  color: rgba(255,255,255);
+  font-size: 16px;
+  margin-left: -45px;
+}
+
+/* Decorative outline */
+.shape {
+  position: absolute;
+  padding-left: 30px;
+  top: 20px;
+  width: 140px;
+  height: 240px;
+  /* border: 2px solid rgba(255,255,255,0.2); */
+  /* border-radius: 20px; */
+  /* transform: rotate(15deg); */
+}
+
+/* SLIDER */
+.slider-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 160px;
+}
+
+.services-slider {
+  display: flex;
+  gap: 60px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+/* CARD */
+.service-card {
+  min-width: 300px;
+  color: white;
+
+  opacity: 0;
+  transform: translateY(120px);
+  transition: all 1.2s ease;   /* slower animation */
+}
+
+.service-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-card h3 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.service-card p {
+  font-size: 22px;
+  line-height: 1.7;
+  color: #e5dbff;
+}
+
+/* Bottom Right Arrows */
+.arrow-controls {
+  position: relative;
+  top: 170px;
+  right: 150px;
+  display: flex;
+  gap: 15px;
+}
+
+.arrow {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  color: white;
+  font-size: 18px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 30px;
+
+}
+
+.arrow:hover {
+  background: white;
+  color: #6e3bb5;
+}
+
+/* Hide left arrow initially */
+/* .arrow.left {
+  display: none;
+} */
+
+
+</style>
+<body>
+
+<section class="services">
+
+  <h2 class="title">SERVICES</h2>
+
+  <div class="services-wrapper">
+
+    <!-- LEFT SIDE -->
+    <div class="left-side">
+      <div class="vertical-text">
+        <span>DIGITAL MARKETING</span>
+        <span>DESIGNING</span>
+        <span>DEVELOPMENT</span>
+      </div>
+
+      <!-- Decorative Shape -->
+      <div class="shape">
+        <img src="./images/SS.png" alt="" srcset="">
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE SLIDER -->
+    <div class="slider-container">
+
+      <div class="services-slider">
+
+        <div class="service-card">
+          <h3>Brand Identity.</h3>
+          <p>
+            Bringing the history of your brand to the forefront gives an emotional
+            dimension to your visual identity.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>Technology.</h3>
+          <p>
+            Creating scalable and performance-driven digital products
+            for modern businesses.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>UX/UI Design.</h3>
+          <p>
+            Designing intuitive and engaging digital experiences
+            for web and mobile platforms.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>Digital Marketing.</h3>
+          <p>
+            Growth-oriented strategies to amplify your brand
+            across digital platforms.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- ARROWS (bottom right) -->
+<div class="arrow-controls">
+  <button class="arrow left">&#8592;</button>
+  <button class="arrow right">&#8594;</button>
+</div>
+
+    </div>
+  </div>
+
+</section>
+
+<script >
+    /* =========================
+   ONE BY ONE SLOW FLY IN
+========================= */
+
+const cards = document.querySelectorAll(".service-card");
+
+function animateCardsSequentially() {
+  cards.forEach((card, index) => {
+    setTimeout(() => {
+      card.classList.add("show");
+    }, index * 400); // delay between cards
+  });
+}
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    if (entries[0].isIntersecting) {
+      animateCardsSequentially();
+    }
+  },
+  { threshold: 0.4 }
+);
+
+observer.observe(document.querySelector(".services"));
+
+
+
+/* =========================
+   SLIDER ARROW CONTROLS
+========================= */
+
+const track = document.querySelector(".services-track");
+const leftBtn = document.querySelector(".arrow.left");
+const rightBtn = document.querySelector(".arrow.right");
+const cards1 = document.querySelectorAll(".service-card");
+
+let currentIndex = 0;
+const cardsPerView = 3;
+const totalCards = cards1.length;
+
+function updateSlider() {
+  const cardWidth = cards1[0].offsetWidth + 60;
+  track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+
+  // Show/hide arrows
+  if (currentIndex > 0) {
+    leftBtn.style.display = "inline-block";
+  } else {
+    leftBtn.style.display = "none";
+  }
+
+  if (currentIndex + cardsPerView >= totalCards) {
+    rightBtn.style.display = "none";
+  } else {
+    rightBtn.style.display = "inline-block";
+  }
+}
+
+rightBtn.addEventListener("click", () => {
+  if (currentIndex + cardsPerView < totalCards) {
+    currentIndex += cardsPerView;
+    updateSlider();
+  }
+});
+
+leftBtn.addEventListener("click", () => {
+  if (currentIndex - cardsPerView >= 0) {
+    currentIndex -= cardsPerView;
+    updateSlider();
+  }
+});
+
+</script>
+</body>
+</html>
