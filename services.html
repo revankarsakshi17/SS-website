@@ -28,7 +28,7 @@ body {
 
 .services {
   background: #6e3bb5;
-  padding: 100px 80px;
+  padding: 70px 80px;
   min-height: 100vh;
   overflow: hidden;
   position: relative;
@@ -36,8 +36,9 @@ body {
 
 .title {
   color: #fff;
-  font-size: 35px;
-  margin-bottom: 120px;
+  font-size: 38px;
+  margin-bottom: 90px;
+  margin-left: 150px;
 }
 
 /* LAYOUT */
@@ -81,7 +82,7 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  margin-left: 160px;
+  margin-left: -30px;
 }
 
 .services-slider {
@@ -117,14 +118,40 @@ body {
   color: #e5dbff;
 }
 
+/* --- SLIDER PAGINATION SYSTEM --- */
+
+.services-track {
+  display: flex;
+  gap: 60px;
+  width: 100%;
+}
+
+/* hide all cards by default */
+.service-card {
+  display: none;
+}
+
+/* visible cards */
+.service-card.active {
+  display: block;
+}
+
+/* arrow position fix */
+.arrow-controls{
+  position:absolute;
+  bottom:-80px;
+  right:0;
+}
+
+
 /* Bottom Right Arrows */
-.arrow-controls {
+/* .arrow-controls {
   position: relative;
   top: 170px;
   right: 150px;
   display: flex;
   gap: 15px;
-}
+} */
 
 .arrow {
   background: transparent;
@@ -143,10 +170,11 @@ body {
   color: #6e3bb5;
 }
 
-/* Hide left arrow initially */
-/* .arrow.left {
-  display: none;
-} */
+.weare{
+  position: absolute;
+  bottom: 30px;
+  left: 250px;
+}
 
 
 </style>
@@ -175,7 +203,7 @@ body {
     <!-- RIGHT SIDE SLIDER -->
     <div class="slider-container">
 
-      <div class="services-slider">
+      <div class="services-slider services-track">
 
         <div class="service-card">
           <h3>Brand Identity.</h3>
@@ -209,6 +237,48 @@ body {
           </p>
         </div>
 
+        <div class="service-card">
+          <h3>UX/UI Design.</h3>
+          <p>
+            Designing intuitive and engaging digital experiences
+            for web and mobile platforms.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>UX/UI Design.</h3>
+          <p>
+            Designing intuitive and engaging digital experiences
+            for web and mobile platforms.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>UX/UI Design.</h3>
+          <p>
+            Designing intuitive and engaging digital experiences
+            for web and mobile platforms.
+          </p>
+        </div>
+
+
+        <div class="service-card">
+          <h3>UX/UI Design.</h3>
+          <p>
+            Designing intuitive and engaging digital experiences
+            for web and mobile platforms.
+          </p>
+        </div>
+
+
+        <div class="service-card">
+          <h3>UX/UI Design.</h3>
+          <p>
+            Designing intuitive and engaging digital experiences
+            for web and mobile platforms.
+          </p>
+        </div>
+
       </div>
 
       <!-- ARROWS (bottom right) -->
@@ -220,6 +290,9 @@ body {
     </div>
   </div>
 
+  <div class="weare">
+    <img src="./images/we are.png" alt="" srcset="">
+  </div>
 </section>
 
 <script >
@@ -251,49 +324,52 @@ observer.observe(document.querySelector(".services"));
 
 
 /* =========================
-   SLIDER ARROW CONTROLS
+   3 CARD GROUP SLIDER
 ========================= */
 
-const track = document.querySelector(".services-track");
-const leftBtn = document.querySelector(".arrow.left");
-const rightBtn = document.querySelector(".arrow.right");
-const cards1 = document.querySelectorAll(".service-card");
+const allCards = document.querySelectorAll(".service-card");
+const nextBtn = document.querySelector(".arrow.right");
+const prevBtn = document.querySelector(".arrow.left");
 
-let currentIndex = 0;
-const cardsPerView = 3;
-const totalCards = cards1.length;
+let page = 0;
+const cardsPerPage = 3;
 
-function updateSlider() {
-  const cardWidth = cards1[0].offsetWidth + 60;
-  track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+/* function to show cards based on page */
+function showCards() {
 
-  // Show/hide arrows
-  if (currentIndex > 0) {
-    leftBtn.style.display = "inline-block";
-  } else {
-    leftBtn.style.display = "none";
+  // hide all
+  allCards.forEach(card => card.classList.remove("active"));
+
+  // calculate start & end
+  const start = page * cardsPerPage;
+  const end = start + cardsPerPage;
+
+  // show only selected group
+  for (let i = start; i < end && i < allCards.length; i++) {
+    allCards[i].classList.add("active");
   }
 
-  if (currentIndex + cardsPerView >= totalCards) {
-    rightBtn.style.display = "none";
-  } else {
-    rightBtn.style.display = "inline-block";
-  }
+  // arrow visibility
+  prevBtn.style.display = page === 0 ? "none" : "inline-block";
+  nextBtn.style.display =
+    end >= allCards.length ? "none" : "inline-block";
 }
 
-rightBtn.addEventListener("click", () => {
-  if (currentIndex + cardsPerView < totalCards) {
-    currentIndex += cardsPerView;
-    updateSlider();
-  }
+/* next button */
+nextBtn.addEventListener("click", () => {
+  page++;
+  showCards();
 });
 
-leftBtn.addEventListener("click", () => {
-  if (currentIndex - cardsPerView >= 0) {
-    currentIndex -= cardsPerView;
-    updateSlider();
-  }
+/* previous button */
+prevBtn.addEventListener("click", () => {
+  page--;
+  showCards();
 });
+
+/* INITIAL LOAD */
+showCards();
+
 
 </script>
 </body>
