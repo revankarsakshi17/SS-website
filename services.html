@@ -69,8 +69,8 @@ body {
   position: absolute;
   padding-left: 30px;
   top: 20px;
-  width: 140px;
-  height: 240px;
+  width: 180px;
+  height: 290px;
   /* border: 2px solid rgba(255,255,255,0.2); */
   /* border-radius: 20px; */
   /* transform: rotate(15deg); */
@@ -108,12 +108,17 @@ body {
 }
 
 .service-card h3 {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   font-size: 32px;
 }
 
+.service-card h5 {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
 .service-card p {
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1.7;
   color: #e5dbff;
 }
@@ -176,6 +181,18 @@ body {
   left: 250px;
 }
 
+.know-more-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: rgba(110, 59, 181, 0.5);
+  /* bacopacity: 0.5; */
+  border: 1px solid rgba(255,255,255,0.6);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 30px;
+}
 
 </style>
 <body>
@@ -205,80 +222,136 @@ body {
 
       <div class="services-slider services-track">
 
-        <div class="service-card">
-          <h3>Brand Identity.</h3>
+        <div class="service-card" data-category="social-media">
+          <h3>Production</h3>
+          <h5>(Photos & Videos)</h5>
+
           <p>
-            Bringing the history of your brand to the forefront gives an emotional
-            dimension to your visual identity.
+            We don’t just shoot content; we craft visual 
+            experiences that sell your story. Every photo
+             and every frame is designed to make your 
+             audience stop, watch, and remember. 
+             Whether it’s product launches or brand 
+             films, our visuals bring your brand to 
+             life and drive real results.
           </p>
+          <button class="know-more-btn">Know More</button>
+
         </div>
 
-        <div class="service-card">
-          <h3>Technology.</h3>
+        <div class="service-card" data-category="social-media">
+          <h3>Influencer</h3>
+          <h5>Marketing</h5>
           <p>
-            Creating scalable and performance-driven digital products
-            for modern businesses.
+            We connect your brand with the right people,
+             not just popular ones. Our influencer are 
+             designed to build trust, spark buzz, and 
+             create conversations that convert. 
+             With the right collaborations, your brand 
+             becomes a name people notice and talk about.
+
           </p>
+          <button class="know-more-btn">Know More</button>
+
         </div>
 
-        <div class="service-card">
-          <h3>UX/UI Design.</h3>
+        <div class="service-card" data-category="social-media">
+          <h3>Branding & Packaging</h3>
+          <h5> Design</h5>
           <p>
-            Designing intuitive and engaging digital experiences
-            for web and mobile platforms.
+            Your brand deserves an identity that speaks 
+            before you do. We design logos, packaging, 
+            and brand visuals that instantly attract 
+            attention and stay in memory. Every element 
+            we create tells your story with clarity, 
+            creativity, and purpose, making your brand 
+            unforgettable.
           </p>
+          <button class="know-more-btn">Know More</button>
+
         </div>
 
-        <div class="service-card">
-          <h3>Digital Marketing.</h3>
+        <div class="service-card" data-category="social-media">
+          <h3>Social Media </h3>
+          <h5>Management</h5>
           <p>
-            Growth-oriented strategies to amplify your brand
-            across digital platforms.
+            Your social media shouldn’t just exist; it 
+            should perform. We plan, create, and manage 
+            everything your brand needs to grow online. 
+            From trend-driven content to strong 
+            storytelling, we make your pages engaging, 
+            consistent, and ready to convert followers 
+            into loyal fans.
+
           </p>
+          <button class="know-more-btn">Know More</button>
+
         </div>
 
-        <div class="service-card">
-          <h3>UX/UI Design.</h3>
+        <div class="service-card" data-category="social-media">
+          <h3>Digital Design </h3>
+          <h5>Services</h5>
           <p>
-            Designing intuitive and engaging digital experiences
-            for web and mobile platforms.
+            Good design gets noticed. Great design gets 
+            results. We create digital designs that make 
+            people stop scrolling and start engaging. 
+            From ad creatives to campaign visuals, every 
+            piece we design adds value to your brand and 
+            turns ideas into impact.
           </p>
+          <button class="know-more-btn">Know More</button>
+
         </div>
 
-        <div class="service-card">
-          <h3>UX/UI Design.</h3>
+        <div class="service-card" data-category="social-media">
+          <h3>Print & Offline </h3>
+          <h5>Marketing</h5>
           <p>
-            Designing intuitive and engaging digital experiences
-            for web and mobile platforms.
+            We make sure your brand stands out everywhere,
+            not just online. From brochures to billboards, 
+            our offline marketing designs are bold, beautiful,
+            and built to catch attention. Every print 
+            material we create works as a strong, lasting 
+            brand statement.
+
           </p>
+          <button class="know-more-btn">Know More</button>
+
         </div>
 
-        <div class="service-card">
-          <h3>UX/UI Design.</h3>
+        <div class="service-card" data-category="social-media">
+          <h3>Performance </h3>
+          <h5>Marketing (Ads)</h5>
           <p>
-            Designing intuitive and engaging digital experiences
-            for web and mobile platforms.
+            We turn clicks into conversions. Our 
+            performance marketing strategies are built 
+            to get your brand seen by the right audience 
+            and drive measurable growth. From ad planning 
+            to optimization, we focus on results that speak 
+            for themselves: more reach, more leads, more 
+            sales.
           </p>
+          <button class="know-more-btn">Know More</button>
+
         </div>
 
 
-        <div class="service-card">
-          <h3>UX/UI Design.</h3>
+        <div class="service-card" data-category="social-media">
+          <h3>Web Development</h3>
+          <h5>(UX/UI)</h5>
           <p>
-            Designing intuitive and engaging digital experiences
-            for web and mobile platforms.
+            Your website is your brand’s first impression, 
+            and we make it unforgettable. With smart UX 
+            and stunning design, we build websites that 
+            look professional, load fast, and convert 
+            visitors into customers. Seamless, functional, 
+            and beautiful that’s how your brand deserves 
+            to be online.
+
           </p>
+          <button class="know-more-btn">Know More</button>
+
         </div>
-
-
-        <div class="service-card">
-          <h3>UX/UI Design.</h3>
-          <p>
-            Designing intuitive and engaging digital experiences
-            for web and mobile platforms.
-          </p>
-        </div>
-
       </div>
 
       <!-- ARROWS (bottom right) -->
