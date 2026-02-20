@@ -15,7 +15,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: "AloeVera", sans-serif;
-      background: #0b0f14;
+      background: #000;
       color: #eaeaea;
       
     }
@@ -238,115 +238,214 @@ nav img {
     padding-left: 150px;
 }
 
-.section2{
-  padding:160px 120px;
+.our-role {
+  background: #000000;
+  color: #ffffff;
+  padding: 100px 10%;
 }
 
-.split2{
-  display:flex;
-  justify-content:space-between;
-  gap:50px;
+.container {
+  max-width: 1500px;
+  margin: auto;
 }
 
-/* LEFT */
-.left2{
-  max-width:900px;
+/* Top Section */
+.top-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 80px;
 }
 
-.left2 h2{
-  font-size:35px;
-  font-weight:600;
-  margin-bottom:16px;
+.top-content h2 {
+  font-size: 32px;
   color: #303030;
-  max-width: 500px;
-
+  font-weight: bolder;
+  margin-bottom: 15px;
 }
 
-.left2 p{
-  font-size:18px;
-  line-height:1.7;
-  opacity:.75;
+.subtitle {
+  font-size: 16px;
+  letter-spacing: 1.5px;
   color: #777777;
 }
 
-/* RIGHT */
-.right2 p{
-  font-size:34px;
-  font-weight:600;
-  line-height:1.35;
-  opacity:.35;
-  text-align:right;
-}
-/* ---------------- BILLBOARD ---------------- */
-.billboard{
-  width:65%;
-  padding-left:40px;
+.top-content .right {
+  max-width: 450px;
+  color: #cbcbcb;
+  font-size: 23px;
+  line-height: 1.6;
+  text-align: left;
+  margin-left: 50px;
 }
 
-.billboard img{
-  width:100%;
-  display:block;
+/* Services */
+.services-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  padding-left: 140px;
+}
+.offline-marketing {
+  background: #0e0e0e;
+  color: #ffffff;
+  padding: 120px 10%;
+  font-family: "Poppins", sans-serif;
 }
 
-/* ---------------- OFFLINE MARKETING ---------------- */
-.offline-text{
-    position:absolute;
-    right:80px;
-    bottom:140px;
-    max-width:340px;
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+.section {
+  background: #000;
+  padding: 120px 10%;
+  position: relative;
 }
 
-.offline-text h2{
-    font-size:26px;
-    font-weight:700;
-    letter-spacing:1px;
-    color:#7a7a7a;
-    margin-bottom:12px;
+/* Billboard Wrapper */
+.billboard {
+  display: flex;
+  justify-content:left;
+  margin-bottom: 80px;
+  position: relative;
 }
 
-.offline-text p{
-    font-size:14px;
-    line-height:1.6;
-    color:#5f5f5f;
+/* Billboard Image */
+.billboard img {
+  width: 1100px;
+  max-width: 100%;
+  transform: translateY(-40px); /* makes it float */
+  filter: drop-shadow(0px 25px 40px rgba(0, 0, 0, 0.8));
 }
 
-.grid{
-  max-width:1000px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:60px;
+/* Text Content */
+.content {
+  text-align: right;
+  max-width: 500px;
+  margin-left: auto;
+  margin-top: -420px;
+  margin-bottom: 100px;
+  margin-right: 100px;
+  text-align: left;
 }
 
-.item{
-  text-align:center;
+.content h2 {
+  font-size: 52px;
+  font-weight: 900;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  color: #303030;
 }
 
-.placeholder{
-  height:160px;
-  background:#111;
-  border:1px solid #333;
-  border-radius:6px;
-  margin-bottom:16px;
+.content p {
+  max-width: 450px;
+  font-size: 20px;
+  color: #aaa;
+  line-height: 1.7;
 }
 
-.label{
-  font-size:13px;
-  color:#ccc;
+/* Grid */
+.offline-marketing{
+  background: #000000;
 }
 
-/* ---------------- OBJECTIVE ---------------- */
-.objective{
-  font-family:'Montserrat',sans-serif;
-  font-size:36px;
-  font-weight:600;
-  text-align:center;
-  color:#2c2c2c;
-  margin-bottom:80px;
+.offline-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 120px;
+  column-gap: -50px;
+  margin-bottom: 100px;
+}
+
+.card {
+  text-align: center;
+}
+
+.card img {
+  width: 350px;
+  height: 550px;
+  object-fit: cover;
+  background-color: #D9D9D9;
+}
+
+.card span {
+  display: block;
+  margin-top: 25px;
+  font-size: 23px;
+  color: #777777;
+  font-family: "AloeVera", sans-serif;
+  margin-left: 50px;
+  text-align: left;
+}
+
+.big-text img {
+  margin-left: 80px;
+  margin-top: 90px;
+  width: 90%;
+}
+
+.online-section {
+  background: #000;
+  padding: 120px 10%;
+}
+
+.online-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+/* Left Text */
+.online-text {
+  flex: 1;
+}
+
+.online-text h2 {
+  font-size: 40px;
+  color: #777777;
+  font-weight:900;
+  margin-bottom: 15px;
+}
+
+.online-text h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #ccc;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.online-text p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #aaa;
+  max-width: 100%;
+}
+
+.marketing-section {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #000000; /* dark background */
+  display: flex;
+  justify-content: center;
 }
 
 
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 /* FOOTER */
 .footer {
@@ -446,7 +545,6 @@ nav img {
   font-size: 12px;
   opacity: 0.5;
 }
-
 /* BRAND STRIP */
 .brand-strip{
   width: 100%;
@@ -502,6 +600,219 @@ nav img {
   color:#fff;
   text-shadow:0 0 12px #7b3fe4;
   transform: translateY(-2px);
+}
+
+/* animation */
+@keyframes scrollBrands{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-50%);
+  }
+}
+.brand-strip:hover .brand-track{
+  animation-play-state: paused;
+}
+
+/* ============================= */
+/* ========= RESPONSIVE ========= */
+/* ============================= */
+
+/* Large laptops */
+@media (max-width: 1440px) {
+
+  .section,
+  .our-role,
+  .offline-marketing,
+  .online-section,
+  .footer {
+    padding: 100px 6%;
+  }
+
+  .split {
+    gap: 50px;
+  }
+
+  .billboard img {
+    width: 100%;
+  }
+
+  .content {
+    margin-top: -250px;
+    margin-right: 0;
+  }
+}
+
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+  nav {
+    padding: 20px 30px;
+  }
+
+  .hero {
+    height: 550px;
+  }
+
+  .info-wrapper {
+    left: 30px;
+    gap: 40px;
+    flex-direction: column;
+  }
+
+  .section {
+    padding: 80px 5%;
+  }
+
+  .split {
+    flex-direction: column;
+  }
+
+  .right {
+    text-align: left;
+    opacity: .6;
+  }
+
+  .top-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .services-wrapper {
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .offline-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 60px;
+  }
+
+  .content {
+    margin-top: 0;
+    max-width: 100%;
+  }
+
+  .online-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .footer-right {
+    gap: 40px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  nav {
+    padding: 15px 20px;
+  }
+
+  .hero {
+    height: 420px;
+  }
+
+  .info-wrapper {
+    left: 20px;
+    bottom: 20px;
+    gap: 20px;
+  }
+
+  .info-block h3 {
+    font-size: 18px;
+  }
+
+  .info-block span {
+    font-size: 16px;
+  }
+
+  .left h2 {
+    font-size: 26px;
+  }
+
+  .left p,
+  .online-text p,
+  .content p {
+    font-size: 16px;
+  }
+
+  .content h2,
+  .online-text h2 {
+    font-size: 28px;
+  }
+
+  .offline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .abtproject {
+    padding: 60px 5%;
+  }
+
+  .proimg {
+    padding-left: 0;
+  }
+
+  .footer {
+    padding: 60px 20px;
+  }
+
+  .footer-heading {
+    font-size: 36px;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-col a {
+    font-size: 14px;
+  }
+
+  .brand-strip {
+    height: 60px;
+  }
+
+  .brand {
+    font-size: 14px;
+  }
+}
+
+
+/* Small phones */
+@media (max-width: 480px) {
+
+  .hero {
+    height: 360px;
+  }
+
+  .footer-heading {
+    font-size: 28px;
+  }
+
+  .online-text h3 {
+    font-size: 18px;
+  }
+
+  .brand-track {
+    gap: 40px;
+  }
 }
 
 </style>
@@ -573,62 +884,118 @@ nav img {
   </div>
 </section>
 
-<!-- OUR ROLE -->
-<section class="section2 split2">
-  <div class="left2">
-    <h2>OUR ROLE</h2>
-    <p>360° Event Marketing by Social Santa</p>
-  </div>
-  <div class="right2">
-    <p>
-    We planned, designed, and executed the entire 
-    marketing ecosystem of the expo covering both 
-    online and offline platforms.
-    </p>
+
+<section class="our-role">
+  <div class="container">
+
+    <!-- Top Section -->
+    <div class="top-content">
+      <div class="left">
+        <h2>OUR ROLE</h2>
+        <p class="subtitle">360° Event Marketing by Social Santa</p>
+      </div>
+
+      <div class="right">
+        <p>
+          We planned, designed, and executed the entire marketing ecosystem
+          of the expo covering both online and offline platforms.
+        </p>
+      </div>
+    </div>
+
+    <!-- Services Layout -->
+    <div class="services-wrapper">
+  <img src="../images/Belvisual2.png" alt="">
   </div>
 </section>
 
 <!-- IMAGE -->
 <section class="center-img">
-  <img src="../images/Belvisual2.png" alt="">
 </section>
 
 <!-- BILLBOARD -->
 <section class="section">
   <div class="billboard">
-    <img src="../images/BHoarding.png" alt="">
+    <img src="../images/BHoarding.png" alt="Billboard">
+  </div>
+
+  <div class="content">
+    <h2>OFFLINE MARKETING</h2>
+    <p>
+      To build strong recall and visibility,
+      we executed large-scale offline
+      marketing across key locations.
+    </p>
   </div>
 </section>
 
-<!-- OFFLINE MARKETING -->
-<section class="section offline">
-   <div class="content">
-        <h2>OFFLINE MARKETING</h2>
-        <p>
-            To build strong recall and visibility,
-            we executed large-scale offline
-            marketing across key locations.
-        </p>
+<section class="offline-marketing">
+
+    <!-- Image Grid -->
+    <div class="offline-grid">
+
+      <div class="card">
+        <img src="images/img1.png" alt="">
+        <span>Hoardings across<br> city locations</span>
+      </div>
+
+      <div class="card">
+        <img src="images/img2.png" alt="">
+        <span>Banners and <br> Creatives</span>
+      </div>
+
+      <div class="card">
+        <img src="images/img3.png" alt="">
+        <span>Arch Gate Branding</span>
+      </div>
+
+      <div class="card">
+        <img src="images/img4.png" alt="">
+        <span>Venue Visual <br>Communication</span>
+      </div>
+
+      <div class="card">
+        <img src="images/img5.png" alt="">
+        <span>Directional Signage</span>
+      </div>
+
+      <div class="card">
+        <img src="images/img6.png" alt="">
+        <span>Print Collaterals</span>
+      </div>
+
     </div>
 
-  <div class="grid">
-    <div class="item"><div class="placeholder"></div><div class="label">Hoardings across prime city locations</div></div>
-    <div class="item"><div class="placeholder"></div><div class="label">Banners and Outdoor Creatives</div></div>
-    <div class="item"><div class="placeholder"></div><div class="label">Arch / Gate Branding</div></div>
-    <div class="item"><div class="placeholder"></div><div class="label">Venue Visual Communication</div></div>
-    <div class="item"><div class="placeholder"></div><div class="label">Directional Signage</div></div>
-    <div class="item"><div class="placeholder"></div><div class="label">Print Collaterals</div></div>
-  </div>
+    <!-- Big Statement -->
+    <div class="big-text">
+      <img src="../images/BelText.png" alt="" srcset="">
+    </div>
 </section>
 
-<!-- OBJECTIVE -->
-<section class="section">
-  <div class="objective">
-    The objective was simple. Make the Expo Impossible to Miss.
-  </div>
-  <div class="center-img">
-    <img src="../images/Belvisual3.png" alt="">
-  </div>
+<section class="online-section">
+
+  <div class="online-container">
+
+    <!-- Left Text Content -->
+    <div class="online-text">
+      <h2>ONLINE MARKETING</h2>
+      <h3>8 Years Offline. This Year, <br> Digital Takes Over.</h3>
+
+      <p>
+        For the past 8 years, Belcon focused only on offline marketing.
+        This year, they stepped into digital with us. Our objective was to
+        build a strong online presence, reach the right audience, and
+        convert digital engagement into real event visitors.
+      </p>
+    </div>
+
+</section>
+<section class="marketing-section">
+
+    <!-- Your image goes here -->
+    <div class="image-wrapper">
+      <img src="../images/Belvisual3.png" alt="Marketing Image">
+    </div>
 </section>
 
 <!-- BRANDS STRIP -->
