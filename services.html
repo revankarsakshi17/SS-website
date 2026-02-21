@@ -21,10 +21,109 @@ html, body {
 
 body {
       font-family: "AloeVera", sans-serif;
-      background:white;
+      background:#6e3bb5;
       color:black;
 }
 
+.navbar {
+      width: 100%;
+      /* max-width: 1100px; */
+      /* margin: 30px auto; */
+      padding: 26px 38px;
+      /* background: linear-gradient(90deg, #2b1b5a, #120a2e); */
+      border-bottom-left-radius: 45px;
+      border-bottom-right-radius: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: bold;
+      letter-spacing: 1px;
+      padding-left: 140px;
+      padding-top: 10px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      opacity: 0;
+      transform: translateY(-6px);
+      pointer-events: none;
+      transition: all 0.35s ease;
+    }
+
+    nav.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 8px 14px;
+      border-radius: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    }
+
+    nav a:hover {
+      transform: translateY(-1px);
+    }
+
+    nav a.active {
+      background: white;
+      color: black;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    #navMenu{
+      gap: 30px;
+      margin-left: 50px;
+
+    }
+
+    /* #navMenu .Contact {
+      margin-left:300px;
+
+    } */
+
+    /* THREE DOTS */
+    .menu-dots {
+      display: flex;
+      align-items: center; /* fixed vertical alignment */
+      gap: 6px;
+      cursor: pointer;
+      padding-right: 140px;
+      padding-top: 10px;
+    }
+
+    .menu-dots span {
+      width: 11px;
+      height: 11px;
+      background: white;
+      border-radius: 50%;
+      display: block;
+    }
+
+    .menu-dots span:first-child {
+      width: 11px;
+      height: 11px;
+      margin-bottom: 7px;
+      background: white;
+      border-radius: 50%;
+      display: block;
+    }
+
+    /* DEMO CONTENT */
+    .demo {
+      text-align: center;
+      margin-top: 150px;
+      opacity: 0.7;
+    }
 
 .services {
   background: #6e3bb5;
@@ -197,6 +296,26 @@ body {
 </style>
 <body>
 
+<!-- MAIN CONTENT -->
+  <header class="navbar">
+    <div class="logo"><img src="./images/SSlogo.png" alt="" srcset=""></div>
+
+    <nav id="navMenu">
+      <a class="active">Home</a>
+      <a>Services</a>
+      <a>Works</a>
+      <a>About us</a>
+      <a class="Contact">Contact us</a>
+    </nav>
+
+    <div class="menu-dots" id="menuBtn">
+      <span class="first"></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+
 <section class="services">
 
   <h2 class="title">SERVICES</h2>
@@ -367,6 +486,38 @@ body {
     <img src="./images/we are.png" alt="" srcset="">
   </div>
 </section>
+
+<script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navMenu = document.getElementById("navMenu");
+
+    // Toggle menu visibility
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+
+    // Active state handling for nav links
+    const navLinks = navMenu.querySelectorAll("a");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
+  </script>
+<script>
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  // const content = document.getElementById("content");
+
+  // Optional delay for smooth effect
+  setTimeout(() => {
+    loader.style.display = "none";
+    content.style.display = "block";
+  }, 1500); // 1.5 seconds
+});
+</script>
 
 <script >
     /* =========================

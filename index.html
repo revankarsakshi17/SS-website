@@ -25,7 +25,7 @@
     <nav id="navMenu">
       <a class="active">Home</a>
       <a>Services</a>
-      <a>Projects</a>
+      <a>Works</a>
       <a>About us</a>
       <a class="Contact">Contact us</a>
     </nav>
@@ -50,35 +50,85 @@
 </section>
 
 
-<!-- <section class="testimonial-wrapper">
-  <div class="testimonial-card" id="testimonialCard">
-    <div class="stars">⭐⭐⭐⭐⭐</div>
-    <p class="text" id="testimonialText"></p>
-    <span class="author" id="testimonialAuthor"></span>
+<!-- ================= TESTIMONIAL SECTION ================= -->
+<section class="testimonial-section">
+  <div class="testimonial-container">
+    
+    <div class="testimonial-left">
+      <p class="small-text">
+        Client testimonial expressing joy and emotion over candid photographs 
+        that captured the day naturally and authentically.
+      </p>
+    </div>
+
+    <div class="testimonial-right">
+  
+  <div class="quote-row">
+    <div class="quote-icon"><img src="./images/quotes.png" alt="" srcset=""></div>
+
+    <div class="quote-content">
+      <h2>
+        He has a rare ability to capture moments 
+        as they naturally unfold.
+      </h2>
+
+      <p class="testimonial-desc">
+        The result is a collection of images that feel timeless, personal,
+        and deeply human. A seamless experience with photos that reflect
+        the moment as it truly was.
+      </p>
+
+      <div class="rating">
+        5.0 / 5 ★★★★★
+      </div>
+    </div>
   </div>
-</section> -->
+  </div>
+</section>
+
+<div class="divider"></div>
 
 
-<footer>
-<div>reallygood@gmail.com<br>+91 XXXXX XXXXX</div>
- <div class="footer-icons">
-    <a href="#">
-      <img src="./images/insta.png" alt="Instagram">
-    </a>
-    <a href="#">
-      <img src="./images/linkedin.png" alt="LinkedIn">
-    </a>
-    <a href="#">
-      <img src="./images/X.png" alt="Twitter">
-    </a>
-    <a href="#">
-      <img src="./images/youtube.png" alt="YouTube">
-    </a>
-    <a href="#">
-      <img src="./images/facebook.png" alt="Facebook">
-    </a>
+<!-- ================= OUR CLIENTS SECTION ================= -->
+<section class="clients-section">
+  <h2 class="section-title">Our Clients</h2>
+
+  <div class="clients-logos">
+    <img src="./images/ourClients.png" alt="Client Logo">
+
   </div>
-</footer>
+
+  <p class="clients-desc">
+    At Social Santa, we proudly partner with brands that trust us to grow their presence,
+    strengthen their identity, and deliver results. From emerging businesses to established
+    names, our clients are at the heart of everything we create.
+  </p>
+</section>
+
+
+<!-- ================= CTA / FOOTER SECTION ================= -->
+<section class="cta-section">
+  <div class="cta-container">
+    <div class="cta-left">
+      <h2>Let’s Grow Your <br> Brand Together</h2>
+    </div>
+
+    <div class="cta-right">
+      <p>Office: 8792757839<br><br>
+      helpsocialsanta@gmail.com</p>
+    </div>
+  </div>
+
+    <img src="./images/whiteDivider.png" alt="" srcset="" class="divider">
+
+      <div class="social-icons">
+        <a href="#"><img src="./images/insta.png" alt="Instagram"></a>
+        <a href="#"><img src="./images/linkedin.png" alt="LinkedIn"></a>
+        <a href="#"><img src="./images/x.png" alt="X"></a>
+        <a href="#"><img src="./images/youtube.png" alt="YouTube"></a>
+        <a href="#"><img src="./images/facebook.png" alt="Facebook"></a>
+      </div>
+</section>
   <!-- <div class="demo">Click the 3 dots to toggle menu</div> -->
 
   <script>
@@ -111,58 +161,6 @@ window.addEventListener("load", () => {
     content.style.display = "block";
   }, 1500); // 1.5 seconds
 });
-</script>
-<script>
-
-  const testimonials = [
-    {
-      text: "Social Santa completely transformed our brand presence.",
-      author: "Savannah Nguyen – YouTube Influencer"
-    },
-    {
-      text: "Their creative strategy doubled our engagement.",
-      author: "Arjun Mehta – Startup Founder"
-    },
-    {
-      text: "The most professional social media team we’ve worked with.",
-      author: "Priya Sharma – Marketing Lead"
-    },
-    {
-      text: "Every campaign feels premium and thoughtful.",
-      author: "Daniel Brooks – Content Creator"
-    }
-  ];
-
-  let index = 0;
-
-  const card = document.getElementById("testimonialCard");
-  const textEl = document.getElementById("testimonialText");
-  const authorEl = document.getElementById("testimonialAuthor");
-
-  function setTestimonial(i) {
-    textEl.textContent = testimonials[i].text;
-    authorEl.textContent = testimonials[i].author;
-  }
-
-  setTestimonial(index);
-
-  function swapTestimonial() {
-    card.classList.add("swap-out");
-
-    setTimeout(() => {
-      index = (index + 1) % testimonials.length;
-      setTestimonial(index);
-
-      card.classList.remove("swap-out");
-      card.classList.add("swap-in");
-
-      requestAnimationFrame(() => {
-        card.classList.remove("swap-in");
-      });
-    }, 500);
-  }
-
-  setInterval(swapTestimonial, 8000);
 </script>
 
 </body>
