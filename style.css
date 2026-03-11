@@ -179,7 +179,7 @@ html, body {
     }
 
     .hero {
-      max-width: 1600px;
+      max-width: 1900px;
       margin: 20px ;
       display: grid;
       grid-template-columns: 0.6fr 1.4fr;
@@ -189,7 +189,7 @@ html, body {
       margin-top: -50px;
     }
     .hero h1 {
-      font-size: 70px;
+      font-size: 60px;
       line-height: 1.2;
       margin-bottom: 18px;
       text-align: left;
@@ -228,7 +228,7 @@ html, body {
       width: 100%;
       max-width: 700px;
       filter: drop-shadow(0 0 40px rgba(138,92,255,.6));
-      margin-left: 280px;
+      margin-left: 200px;
       padding-top: 30px;
     }
 
@@ -307,7 +307,7 @@ html, body {
 .clients-section {
   background: white;
   text-align: center;
-  padding: 80px 10%;
+  padding: 80px ;
 }
 
 .section-title {
