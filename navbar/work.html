@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Social Santa – Work</title>
+
+<style>
+/* ---------------- RESET ---------------- */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#000;
+  color:#fff;
+  font-family: "Inter", sans-serif;
+}
+
+/* ---------------- HEADER ---------------- */
+header{
+  padding:30px 70px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:13px;
+  letter-spacing:1.5px;
+}
+
+.menu{
+  font-size:26px;
+}
+
+/* ---------------- WORK SECTION ---------------- */
+.work-section{
+  padding:100px 70px 40px;
+  display:flex;
+  justify-content:space-between;
+}
+
+.work-left h1{
+  font-size:150px;
+  font-weight:800;
+  letter-spacing:6px;
+  opacity:0.08;
+}
+
+.work-left span{
+  font-size:90px;
+}
+
+/* ---------------- FILTERS ---------------- */
+.work-right{
+  text-align:right;
+}
+
+.filter-title{
+  font-size:12px;
+  opacity:0.6;
+  letter-spacing:1px;
+  margin-bottom:18px;
+}
+
+.filters{
+  display:grid;
+  grid-template-columns:repeat(2, 180px);
+  gap:16px;
+}
+
+.filters button{
+  background:transparent;
+  border:1px solid #222;
+  color:#fff;
+  padding:14px 0;
+  font-size:11px;
+  letter-spacing:1px;
+  cursor:pointer;
+}
+
+.filters button.active,
+.filters button:hover{
+  border-color:#555;
+}
+
+/* ---------------- DIVIDER ---------------- */
+.divider{
+  height:1px;
+  background:#222;
+  margin:70px;
+}
+
+/* ---------------- PROJECT GRID ---------------- */
+.projects{
+  padding:0 70px 120px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:50px 40px;
+}
+
+/* ---------------- CARD ---------------- */
+.card{
+  transition:opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card.hide{
+  opacity:0;
+  transform:scale(0.95);
+  pointer-events:none;
+  display:none;
+}
+
+.card img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  border-radius:18px;
+}
+
+.card-content{
+  margin-top:14px;
+  display:flex;
+  justify-content:space-between;
+}
+
+.card-title{
+  font-size:14px;
+  letter-spacing:1px;
+}
+
+.card-category{
+  font-size:11px;
+  opacity:0.6;
+  margin-top:6px;
+}
+
+.view{
+  font-size:12px;
+  opacity:0.8;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.view span{
+  font-size:16px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media(max-width:1200px){
+  .projects{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+  header,
+  .work-section,
+  .projects{
+    padding-left:30px;
+    padding-right:30px;
+  }
+
+  .work-section{
+    flex-direction:column;
+    gap:40px;
+  }
+
+  .projects{
+    grid-template-columns:1fr;
+  }
+
+  .filters{
+    grid-template-columns:1fr 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">SOCIAL SANTA</div>
+  <div class="menu">•••</div>
+</header>
+
+<section class="work-section">
+  <div class="work-left">
+    <h1>WORK <span>✦</span></h1>
+  </div>
+
+  <div class="work-right">
+    <div class="filter-title">FILTER BY:</div>
+    <div class="filters">
+      <button class="active" data-filter="all">ALL</button>
+      <button data-filter="production">PRODUCTION</button>
+       <button data-filter="production">INFLUENCER MARKETING</button>
+      <button data-filter="branding">BRANDING & PACKAGING</button>
+      <button data-filter="performance">PERFORMANCE</button>
+      <button data-filter="creative">CREATIVE DESIGN</button>
+      <button data-filter="uiux">UI/UX</button>
+      <button data-filter="social">SOCIAL MEDIA</button>
+       <button data-filter="production">ONLINE MARKETING</button>
+        <button data-filter="production">OFFLINE MARKETING</button>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="projects">
+
+  <div class="card" data-category="branding">
+    <img src="./images/Card.png">
+    <div class="card-content">
+      <div>
+        <div class="card-title">OCEAN PLATE</div>
+        <div class="card-category">BRANDING</div>
+      </div>
+      <a href="../Oceanplate/Ocean.html" class="view">VIEW PROJECT <span>↗</span></a>
+    </div>
+  </div>
+
+  <div class="card" data-category="social">
+    <img src="./images/Card (1).png">
+    <div class="card-content">
+      <div>
+        <div class="card-title">GALANGAL</div>
+        <div class="card-category">SOCIAL MEDIA</div>
+      </div>
+      <div class="view">VIEW PROJECT <span>↗</span></div>
+    </div>
+  </div>
+
+  <div class="card" data-category="branding">
+    <img src="./images/Card (2).png">
+    <div class="card-content">
+      <div>
+        <div class="card-title">AMD</div>
+        <div class="card-category">BRANDING</div>
+      </div>
+      <a href="../AMD/AMD.html" class="view">VIEW PROJECT <span>↗</span></a>
+    </div>
+  </div>
+  
+
+  <div class="card" data-category="performance">
+    <img src="./images/Card (3).png">
+    <div class="card-content">
+      <div>
+        <div class="card-title">NIYAAZ</div>
+        <div class="card-category">PERFORMANCE</div>
+      </div>
+      <div class="view">VIEW PROJECT <span>↗</span></div>
+    </div>
+  </div>
+
+  <div class="card" data-category="social">
+    <img src="./images/Card (4).png">
+    <div class="card-content">
+      <div>
+        <div class="card-title">NAVIEO</div>
+        <div class="card-category">SOCIAL MEDIA</div>
+      </div>
+      <a href="../Navieo/navieo.html" class="view">VIEW PROJECT <span>↗</span></a>
+    </div>
+  </div>
+
+  <div class="card" data-category="production">
+    <img src="./images/Card (5).png">
+    <div class="card-content">
+      <div>
+        <div class="card-title">TBQ</div>
+        <div class="card-category">PRODUCTION</div>
+      </div>
+      <div class="view">VIEW PROJECT <span>↗</span></div>
+    </div>
+  </div>
+
+  <div class="card" data-category="online-marketing">
+    <img src="./images/Card (5).png">
+    <div class="card-content">
+      <div>
+        <div class="card-title">Annostav</div>
+        <div class="card-category">online-marketing</div>
+      </div>
+      <a href="../Annostav/Annostav.html" class="view">VIEW PROJECT <span>↗</span></a>
+    </div>
+  </div>
+
+   <div class="card" data-category="online-marketing">
+    <img src="./images/Card (5).png">
+    <div class="card-content">
+      <div>
+        <div class="card-title">Belcon</div>
+        <div class="card-category">online-marketing</div>
+      </div>
+      <a href="../Belcon/belcon.html" class="view">VIEW PROJECT <span>↗</span></a>
+    </div>
+  </div>
+
+   <div class="card" data-category="online-marketing">
+    <img src="./images/Card (5).png">
+    <div class="card-content">
+      <div>
+        <div class="card-title">Creamaai</div>
+        <div class="card-category">online-marketing</div>
+      </div>
+      <a href="../creamaai/creamaai.html" class="view">VIEW PROJECT <span>↗</span></a>
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+const filterButtons = document.querySelectorAll('.filters button');
+const cards = document.querySelectorAll('.card');
+
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+
+    // Active state
+    filterButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.getAttribute('data-filter');
+
+    cards.forEach(card => {
+      const category = card.getAttribute('data-category');
+
+      if(filter === 'all' || category === filter){
+        card.classList.remove('hide');
+      } else {
+        card.classList.add('hide');
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
